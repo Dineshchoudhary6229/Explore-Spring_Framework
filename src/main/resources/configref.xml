@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean class="com.decipherzone.referenceType.Laptop" name="laptop">
+      <property name="company" value="Dell"/>
+        <property name="no" value="10"/>
+    </bean>
+    <bean class="com.decipherzone.referenceType.Programmer" name="progrmr">
+        <!--  dependecy injection with setter we use following tag i.e property tags-->
+        <property name="Id" value="2"/>
+        <property name="lapt" ref="laptop"/>
+        <!--for constructor , we use below tag for dependency injection with constructors -->
+        <constructor-arg value="Dinesh" type="String" index="0"/>
+        <constructor-arg value="DecipherZone" type="String" index="1"/>
+
+    </bean>
+</beans>
