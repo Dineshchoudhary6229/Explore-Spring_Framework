@@ -1,4 +1,4 @@
-package com.decipherzone;
+package com.decipherzone.spring.jdbc;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
