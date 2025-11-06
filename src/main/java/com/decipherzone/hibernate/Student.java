@@ -16,7 +16,7 @@ public class Student {
     @Column(name = "city")
     private String city;
 
-    @Embedded
+    @Embedded              // this embedded certificate class here
     private Certificate certificate;
 
     public Certificate getCertificate() {
@@ -34,7 +34,7 @@ public class Student {
         this.city = city;
     }
 
-    // getters and setters to set and to retrieve  student data from and to data base
+    // getters and setters to set and to retrieve  student data from and to database
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
