@@ -65,11 +65,14 @@ public class MapApp {
 //to retrieve/fetch  question data in console
         Question q= (Question) session.get(Question.class,11);
         System.out.println(q.getQuestion());
+    //as we applied Eager loading in Question class on list so we get below output
+    // while lazy loading is present automatically and in it , it doesn't run query on answer
+        System.out.println(q.getAnswers().size());
 
 //to retrieve/fetch answers in console through list we use for loop or for each loop
-        for(Answer a: q.getAnswers()){
-            System.out.println(a.getAnswer());
-        }
+//        for(Answer a: q.getAnswers()){
+//            System.out.println(a.getAnswer());
+//        }
 
         session.getTransaction().commit();
 

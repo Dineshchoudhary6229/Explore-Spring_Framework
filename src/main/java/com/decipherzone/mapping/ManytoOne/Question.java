@@ -12,7 +12,9 @@ public class Question {
     @Column(name = "Question")
     private String question;
 
-    @OneToMany(mappedBy ="question", cascade = CascadeType.ALL)
+ //Fetching with Eager loading
+
+    @OneToMany(mappedBy ="question", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<Answer> answers;
 
 
