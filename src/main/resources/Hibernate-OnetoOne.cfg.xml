@@ -20,8 +20,10 @@
         <property name="hibernate.format_sql">true</property>
 
         <!-- Entity class mapping -->
-        <mapping class="com.decipherzone.hibernate.Student"  />    <!--for student -->
-        <mapping class="com.decipherzone.hibernate.Address"  />    <!--for address-->
+        <mapping class="com.decipherzone.hibernate.Student"  />    <!--for student class-->
+        <mapping class="com.decipherzone.hibernate.Address"  />    <!--for address class-->
+        <mapping class="com.decipherzone.mapping.OnetoOne.Question"   />   <!--for OnetoOne Question class-->
+        <mapping class="com.decipherzone.mapping.OnetoOne.Answer"     />  <!--for OnetoOne Answer class-->
 
     </session-factory>
 </hibernate-configuration>

@@ -1,5 +1,7 @@
-package com.decipherzone.hibernate;
+//Embedding certificate class field  as column in student table with @Embeddable and
+// @Embedded annotation
 
+package com.decipherzone.hibernate;
 import jakarta.persistence.Embeddable;
 
 @Embeddable              // this is use to make this class fields embedded in Student
