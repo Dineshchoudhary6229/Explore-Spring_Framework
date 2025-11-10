@@ -1,5 +1,6 @@
-//ManyToMany mapping
+//ManyToMany mapping with pure Hibernate and console base not a spring boot
 package com.decipherzone.mapping.ManytoMany;
+
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,7 +12,6 @@ import java.util.List;
 
 public class MainAPP {
     public static void main(String[] args) throws IOException {
-
 
         SessionFactory factory = new Configuration().configure("Hibernate-ManytoMany.cfg.xml").buildSessionFactory();
 

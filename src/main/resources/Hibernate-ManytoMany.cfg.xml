@@ -15,7 +15,7 @@
 
         <!-- Hibernate properties -->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>  <!--create table when run the main app and after that drop the table from database-->
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
