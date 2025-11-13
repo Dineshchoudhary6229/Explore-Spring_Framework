@@ -57,10 +57,25 @@ public class HomeController {
     }
 
 
-    @RequestMapping("/newshow")             // newshow would be name of controller which we use with localhost to run this controller
-    public String about(){
+    @RequestMapping("/")             // newshow would be name of controller which we use with localhost to run this controller
+    public String show(){
         System.out.println("this is new view by request mapping");
-        return "about";              // this about is name of contoller which we provide to view resolver which provide about.jsp
+        return "welcome";              // this about is name of contoller which we provide to view resolver which provide about.jsp
+    }
+
+    @RequestMapping("/about")
+    public String about(Model model){
+        model.addAttribute("name","Rahul");
+        model.addAttribute("city", "Delhi");
+
+        List<Integer> list = new ArrayList<>();
+        list.add(24);
+        list.add(56);
+        list.add(75);
+        list.add(89);
+        model.addAttribute("array",list);
+
+        return "about";
     }
 
 
