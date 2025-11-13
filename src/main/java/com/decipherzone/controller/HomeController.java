@@ -1,16 +1,78 @@
 package com.decipherzone.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class HomeController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView home() {
-        ModelAndView mv = new ModelAndView("welcome");
-        return mv;
+// Model to send data from controller to view resolver
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String home(Model model) {
+        System.out.println("This is Model to send data from contoller to view ");
+
+// In Model we have method model.addAttribute to add data
+        model.addAttribute("name","Dinesh");
+        model.addAttribute("id",111);
+
+        List<String> friends= new ArrayList<String>();
+        friends.add("Anil");
+        friends.add("Abhay");
+        friends.add("Aman");
+        friends.add("Naman");
+        model.addAttribute("frnd",friends);
+
+        return "index"; // it return the view to resolve and here it is index which turns to index.jsp
     }
+
+//ModelAndView method of controller to view
+    @RequestMapping("/help")
+    public ModelAndView help(){
+        ModelAndView modelAndview= new ModelAndView();
+
+        //setting name of view for view resolver
+        modelAndview.setViewName("help");     // name of view is send like this in ModelAndView it is not reutrned in it as we did in Model
+
+// setting the data
+        modelAndview.addObject("name","Dinesh");
+        modelAndview.addObject("id",123);
+        LocalDateTime now=LocalDateTime.now();
+        modelAndview.addObject("time",now);
+
+        List<String> list = new ArrayList<>();
+        list.add("Google");
+        list.add("Amazon");
+        list.add("Flipkart");
+        list.add("Paytem");
+        modelAndview.addObject("Company", list);
+
+        return modelAndview;    // here we return ModelAndView object not the view as we do in Model
+    }
+
+
+    @RequestMapping("/newshow")             // newshow would be name of controller which we use with localhost to run this controller
+    public String about(){
+        System.out.println("this is new view by request mapping");
+        return "about";              // this about is name of contoller which we provide to view resolver which provide about.jsp
+    }
+
+
 }
+
+
+
+
+
+
+
+// here GET is a http method which retrieve data(read) that is viewing a web page or getting data from server
+// it is one of the http methods like GET(retrieve data from server i.e viewing a web page) ,
+// POST(send data to server i.e submitting a form), PUT(update data on server i.e editing existing resource),
+// DELETE(delete data on server i.e removing a resource form server)
