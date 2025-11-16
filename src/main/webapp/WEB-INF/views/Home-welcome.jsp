@@ -6,5 +6,6 @@
 <body>
     <h2>Spring MVC is Working!</h2>
     <p>Controller successfully returned this JSP view.</p>
+    <hr>
 </body>
 </html>

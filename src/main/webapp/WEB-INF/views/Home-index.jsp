@@ -3,7 +3,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <body>
+
 <h2>Spring-MVC project started with controller </h2>
+
 <h1>currently request mapping is on model and view</h2>
 
 

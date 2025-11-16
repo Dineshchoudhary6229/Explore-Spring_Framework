@@ -29,7 +29,7 @@ public class HomeController {
         friends.add("Naman");
         model.addAttribute("frnd",friends);
 
-        return "index"; // it return the view to resolve and here it is index which turns to index.jsp
+        return "Home-sindex"; // it return the view to resolve and here it is index which turns to index.jsp
     }
 
 //ModelAndView method of controller to view
@@ -38,7 +38,7 @@ public class HomeController {
         ModelAndView modelAndview= new ModelAndView();
 
         //setting name of view for view resolver
-        modelAndview.setViewName("help");     // name of view is send like this in ModelAndView it is not reutrned in it as we did in Model
+        modelAndview.setViewName("Home-help");     // name of view is send like this in ModelAndView it is not reutrned in it as we did in Model
 
 // setting the data
         modelAndview.addObject("name","Dinesh");
@@ -57,10 +57,10 @@ public class HomeController {
     }
 
 
-    @RequestMapping("/")             // newshow would be name of controller which we use with localhost to run this controller
+    @RequestMapping("/")             // ('/')is used for all ,would be name of controller which we use with localhost to run this controller
     public String show(){
         System.out.println("this is new view by request mapping");
-        return "welcome";              // this about is name of contoller which we provide to view resolver which provide about.jsp
+        return "Home-welcome";              // this about is name of contoller which we provide to view resolver which provide about.jsp
     }
 
     @RequestMapping("/about")
@@ -75,7 +75,9 @@ public class HomeController {
         list.add(89);
         model.addAttribute("array",list);
 
-        return "about";
+        return "Home-about";
+        // In this controller we added Expression language for single element adding in about.jsp
+        // and JSTL and Expression language for list traversing check about.jsp better code
     }
 
 
