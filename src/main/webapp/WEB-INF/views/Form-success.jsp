@@ -8,12 +8,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login Details </title>
+<h1>${Header}</h1>
+<h1>${Desc}</h1>
 </head>
 
 <body>
-<h1> Welcome ${userName} </h1>
-<h1>Email id is ${email} </h1>
-<h1>Password is, ${password} </h1>
+<h1> Welcome ${user.userName} </h1>
+<h1>Email id is ${user.email} </h1>
+<h1>Password is, ${user.password} </h1>
 </body>
 
 </html>
+<%--The above userName , email, password after user. should be same as in Form-login--%>

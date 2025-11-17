@@ -16,6 +16,12 @@
     <h1 class="text-center mt-5 col-md-5">Login Form </h1>
 
 
+<%--If want to show commonData at this page then uncomment these or we have to provide those here
+    <h2 class="text-center">${Header}</h2>
+    <p class="text-center">${Desc}</p>
+--%>
+
+
     <div class="container mt-5">
 
     <form action="processLogin" method="post">
