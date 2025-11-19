@@ -1,6 +1,8 @@
 package com.decipherzone.formcontroller;
 
 import com.decipherzone.model.User;
+import com.decipherzone.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -9,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class FormController {
+ // by this object of UserService will be create here
+    @Autowired
+    private UserService userService;
 
     //Data from this is loaded and add that data to that controller first then that controller will execute
     @ModelAttribute
@@ -32,6 +37,10 @@ public class FormController {
     public String handleForm(@ModelAttribute User user, Model model)  {
 
       model.addAttribute(user);
+
+      // for data to save database we use this
+        this.userService.createUser(user);
+
         return "Form-success";
     }
 
