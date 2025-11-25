@@ -1,18 +1,14 @@
+# Maven build folders
 project-1/target/
+project-2/target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
-### IntelliJ IDEA ###
-project-1/.idea/modules.xml
-project-1/.idea/jarRepositories.xml
-project-1/.idea/compiler.xml
-project-1/.idea/libraries/
-*.iws
+# IntelliJ IDEA
+.idea/
 *.iml
-*.ipr
+*.iws
 
-### Eclipse ###
+# Eclipse
 .apt_generated
 .classpath
 .factorypath
@@ -21,18 +17,16 @@ project-1/.idea/libraries/
 .springBeans
 .sts4-cache
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
 
-### Mac OS ###
+# Mac OS
 .DS_Store
