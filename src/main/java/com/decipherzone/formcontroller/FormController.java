@@ -9,18 +9,20 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.stream.Stream;
+
 @Controller
 public class FormController {
- // by this object of UserService will be create here
+ // by @Autowired object of UserService will create here
     @Autowired
     private UserService userService;
 
     //Data from this is loaded and add that data to that controller first then that controller will execute
     @ModelAttribute
-    public void commondData(Model m){
+    public void commonData(Model m){
         m.addAttribute("Header","Learn coding with Spring-MVC");
         m.addAttribute("Desc","This Data will be shown in all controllers ");
-        System.out.println("Common data is loaded.....");
+        System.out.println("Common data is loaded before.....");
     }
 
     @RequestMapping("/login")
@@ -36,10 +38,17 @@ public class FormController {
     @RequestMapping(path="/processLogin" , method=RequestMethod.POST)
     public String handleForm(@ModelAttribute User user, Model model)  {
 
+// Redirect prefix to redirecting to any url or page
+//        if(Stream.of(user.getEmail(),user.getUserName(),user.getPassword()).anyMatch(String::isBlank)){
+         if(user.getEmail().isBlank()){
+            return "redirect:/login";
+        }
+
       model.addAttribute(user);
 
       // for data to save database we use this
         this.userService.createUser(user);
+        System.out.println("user registration is Successful");
 
         return "Form-success";
     }
@@ -61,7 +70,7 @@ public class FormController {
 
 
 /* This code take data from user i.e. from login page and send it to Form-success page with the
-help of  Model model
+help of  (Model model)
 
     @RequestMapping(path="/processLogin" , method=RequestMethod.POST)
     public String handleForm(@RequestParam(value = "userName",required = true) String userName,
