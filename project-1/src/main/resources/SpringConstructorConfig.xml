@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--No Args Constructor -->
+    <bean name="cart1" class="com.decipherzone.constructor.CartItems"></bean>
+
+<!-- Constructor injection : String   -->
+    <bean id="cart2" class="com.decipherzone.constructor.CartItems">
+       <constructor-arg value="Laptop Tv IPhone Laptop" type="String" />
+    </bean>
+
+<!--    Constructor with :List as argument -->
+    <bean id="cart3" class="com.decipherzone.constructor.CartItems">
+        <constructor-arg>
+            <list>
+                <value> Laptop </value>
+                <value> Tv </value>
+                <value> IPhone </value>
+                <value> Laptop </value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+
+<!--Constructor with args as : String ,List-->
+    <bean id="cart4" class="com.decipherzone.constructor.CartItems">
+        <constructor-arg value="Dinesh" type="String"/>
+        <constructor-arg>
+            <list>
+                <value>Laptop </value>
+                <value> Tv </value>
+                <value> IPhone </value>
+                <value> Laptop </value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+
+<!--    Constructor args as : String ,List, Map-->
+    <bean id="cart5" class="com.decipherzone.constructor.CartItems">
+        <constructor-arg value="Dinesh" type="String"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <value> Laptop </value>
+                <value> Tv </value>
+                <value> IPhone </value>
+                <value> Laptop </value>
+            </list>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="Laptop" value="30000.00"></entry>
+                <entry key="Tv" value="22200.00"></entry>
+                <entry key="IPhone" value="58000.00"></entry>
+                <entry key="Laptop" value="88800.00"></entry>
+            </map>
+        </constructor-arg>
+    </bean>
+
+
+    
+<!--  Injecting CartItems class object in Order class :  cart5 is injected in order-->
+    <bean id="order1" class="com.decipherzone.constructor.Order">
+        <constructor-arg value="Dinesh@gmail.com"></constructor-arg>
+        <constructor-arg ref="cart5">            </constructor-arg>
+    </bean>
+
+
+
+
+
+</beans>
