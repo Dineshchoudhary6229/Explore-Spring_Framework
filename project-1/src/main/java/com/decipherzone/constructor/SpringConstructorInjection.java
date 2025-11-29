@@ -3,6 +3,8 @@ package com.decipherzone.constructor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
+
+// For CartItems, Order, SpringConstructorConfig.xml
 public class SpringConstructorInjection {
     public static void main(String[] args) {
 

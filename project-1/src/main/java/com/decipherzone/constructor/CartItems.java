@@ -79,13 +79,13 @@ public class CartItems {
     }
 
 
-    @Override
-    public String toString() {
-        return "CartItems{" +
-                "name='" + name + '\'' +
-                ", itemNames=" + itemNames +
-                ", itemPrice=" + itemPrice +
-                ", productWiring=" + productWiring +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "CartItems{" +
+//                "name='" + name + '\'' +
+//                ", itemNames=" + itemNames +
+//                ", itemPrice=" + itemPrice +
+//                ", productWiring=" + productWiring +
+//                '}';
+//    }
 }
