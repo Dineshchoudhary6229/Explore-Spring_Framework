@@ -7,6 +7,10 @@ public class CartItems {
     private String name;
     private List<String> itemNames;
     private Map<String, Double> itemPrice;   // In map no duplicate value , latest value is shown from two or more value of same key
+    private ProductWiring productWiring;
+
+
+
 
 //    Constructors
 
@@ -30,10 +34,11 @@ public class CartItems {
         System.out.println("Cart Items Constructor with : List , String");
     }
 
-    public CartItems(String name, List<String> itemNames, Map<String, Double> itemPrice) {
+    public CartItems(String name, List<String> itemNames, Map<String, Double> itemPrice , ProductWiring productWiring) {
         this.name = name;
         this.itemNames = itemNames;
         this.itemPrice = itemPrice;
+        this.productWiring=productWiring;
         System.out.println("Cart Items Constructor with : List , String , Map");
         System.out.println("\n");
     }
@@ -65,6 +70,14 @@ public class CartItems {
         this.itemPrice = itemPrice;
     }
 
+    public ProductWiring getProductWiring() {
+        return productWiring;
+    }
+
+    public void setProductWiring(ProductWiring productWiring) {
+        this.productWiring = productWiring;
+    }
+
 
     @Override
     public String toString() {
@@ -72,6 +85,7 @@ public class CartItems {
                 "name='" + name + '\'' +
                 ", itemNames=" + itemNames +
                 ", itemPrice=" + itemPrice +
+                ", productWiring=" + productWiring +
                 '}';
     }
 }

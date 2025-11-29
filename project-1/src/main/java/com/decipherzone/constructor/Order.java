@@ -34,11 +34,15 @@ public class Order {
         this.cartItems = cartItems;
     }
 
-    @Override
-    public String toString() {
-        return "Order{" +
-                "emailId='" + emailId + '\'' +
-                ", cartItems=" + cartItems +
-                '}';
-    }
+
+// If we write toString here then it will invoke parametrized constructor of Order class
+//which we print cartItems in Order class and also in SpringBeanWiring(with the help of ProductWiring )
+
+//    @Override
+//    public String toString() {
+//        return "Order{" +
+//                "emailId='" + emailId + '\'' +
+//                ", cartItems=" + cartItems +
+//                '}';
+//    }
 }

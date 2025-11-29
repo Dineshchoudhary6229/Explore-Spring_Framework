@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+<!--    Constructor args as : String ,List, Map-->
+<!--    ProductWiring class bean is injected in it with ref= "product1"-->
+    <bean id="cart5" class="com.decipherzone.constructor.CartItems">
+        <constructor-arg value="Dinesh" type="String"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <value> Laptop </value>
+                <value> Tv </value>
+                <value> IPhone </value>
+                <value> Laptop </value>
+            </list>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="Laptop" value="30000.00"></entry>
+                <entry key="Tv" value="22200.00"></entry>
+                <entry key="IPhone" value="58000.00"></entry>
+                <entry key="Laptop" value="88800.00"></entry>
+            </map>
+        </constructor-arg>
+
+
+        <constructor-arg ref="product1" ></constructor-arg>
+    </bean>
+
+
+    
+<!--  Injecting CartItems class object/bean is injected here  in Order class :  cart5 is injected in order-->
+    <bean id="order1" class="com.decipherzone.constructor.Order">
+        <constructor-arg value="Dinesh@gmail.com"></constructor-arg>
+
+
+        <constructor-arg ref="cart5">            </constructor-arg>
+    </bean>
+
+
+<!--Bean for ProductWiring-->
+    <bean id="product1" class="com.decipherzone.constructor.ProductWiring">
+        <property name="id" value="333" ></property>
+        <property name="name" value="HDD " ></property>
+        <property name="price" value="9500.00" ></property>
+
+    </bean>
+
+
+
+</beans>

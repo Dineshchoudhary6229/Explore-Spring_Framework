@@ -44,6 +44,7 @@ public class SpringConstructorInjection {
 
 
         Order o1= (Order) container.getBean("order1");
+
         System.out.println(o1.getEmailId());
         System.out.println(o1.getCartItems());
         System.out.println("\n");
@@ -51,6 +52,9 @@ public class SpringConstructorInjection {
         System.out.println(o1.getCartItems().getName());
         System.out.println(o1.getCartItems().getItemPrice());
         System.out.println(o1.getCartItems().getItemNames());
+        System.out.println("\n");
+
+
 
 
 
