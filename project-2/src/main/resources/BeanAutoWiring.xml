@@ -4,20 +4,23 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="product1" class="com.decipherzone.beanwiring.Product" >
+    <bean id="product1" class="com.decipherzone.beanwiring.byName.Product" >
         <constructor-arg  value="111" />
         <constructor-arg  value="IPhone16" />
         <constructor-arg  value="99999.00" />
     </bean>
 
-    <bean id="product2" class="com.decipherzone.beanwiring.Product" >
+    <bean id="product2" class="com.decipherzone.beanwiring.byName.Product" >
         <constructor-arg  value="132" />
         <constructor-arg  value="IPhone16 pro" />
         <constructor-arg  value="120000.00" />
     </bean>
-    <bean id="information" class="com.decipherzone.beanwiring.Information" >
+    <bean id="information" class="com.decipherzone.beanwiring.byName.Information" >
 
     </bean>
 
-    <bean id="cart" class="com.decipherzone.beanwiring.Cart" autowire="byName"/>
+    <bean id="cart" class="com.decipherzone.beanwiring.byName.Cart" autowire="byName"/>
+
+
+    <bean id="order" class="com.decipherzone.beanwiring.byName.Order" autowire="byName"></bean>
 </beans>

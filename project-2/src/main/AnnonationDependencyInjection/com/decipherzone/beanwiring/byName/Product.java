@@ -1,4 +1,4 @@
-package com.decipherzone.beanwiring;
+package com.decipherzone.beanwiring.byName;
 
 public class Product {
 
