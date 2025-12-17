@@ -18,10 +18,12 @@ public class Example1Application {
 
 
 
-        Customer customer1 =(Customer) context.getBean("customer");
-        System.out.println(customer1);
-        System.out.println(customer1.getId());
-        System.out.println(customer1.getName());
+        Customer customer = (Customer) context.getBean("customer");
+        Customer customer2 = (Customer) context.getBean("customer2");
+
+        System.out.println("customer  hashcode : " + System.identityHashCode(customer));
+        System.out.println("customer2 hashcode : " + System.identityHashCode(customer2));
+
 
         Product product1=(Product) context.getBean("product");
         System.out.println(product1);
@@ -36,7 +38,9 @@ public class Example1Application {
         System.out.println(order1.getOrderId());
 
     }
-    @Bean
+
+// In spring boot we can define bean here along with configuration class
+    @Bean(name = "customer2")
     public Customer customer2(){
         System.out.println("This is second bean object of Customer :");
         return new Customer();
