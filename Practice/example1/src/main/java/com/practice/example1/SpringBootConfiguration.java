@@ -16,13 +16,13 @@ public class SpringBootConfiguration {
         return new Customer();
     }
     @Bean
-    private Order order1(){
+    public Order order1(){
         System.out.println("Order bean from configuration class:");
         return new Order();
     }
 
     @Bean
-    private Product product1(){
+    public Product product1(){
         System.out.println("Product bean from configuration class:");
         return new Product();
     }
