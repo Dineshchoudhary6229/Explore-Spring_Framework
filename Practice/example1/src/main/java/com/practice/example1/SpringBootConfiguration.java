@@ -4,8 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 // Basically we define bean here in configuration class , but we don't need to provide @ComponentScan
-// because we use @SpringBootApplication annotation in main method of spring boot application
-@Configuration
+//and also @Configuration because we use @SpringBootApplication annotation in main method of spring boot application
 public class SpringBootConfiguration {
 
     @Bean
