@@ -12,6 +12,7 @@ public class OrderDetails {
     private double orderAmount;
     private String userEmail;
 
+
 //    @Qualifier("cartItems2")              // this will tell spring that use cartItems2 as bean and qualifier always used with autowired
 //    @Autowired
 //    private List<CartItems> cartItems;    // If we want to run 2 beans or more than instead of @primary,@qualifier we can use this list to execute them
