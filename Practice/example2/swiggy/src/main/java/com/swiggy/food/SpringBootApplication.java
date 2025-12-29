@@ -3,21 +3,18 @@ package com.swiggy.food;
 import com.swiggy.food.delivery.CartItems;
 import com.swiggy.food.delivery.OrderDetails;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
-@SpringBootApplication
-public class SwiggyApplication {
+@org.springframework.boot.autoconfigure.SpringBootApplication
+public class SpringBootApplication {
 
 	public static void main(String[] args) {
 
-      ConfigurableApplicationContext context= SpringApplication.run(SwiggyApplication.class, args);
+      ConfigurableApplicationContext context= SpringApplication.run(SpringBootApplication.class, args);
 
 
 
