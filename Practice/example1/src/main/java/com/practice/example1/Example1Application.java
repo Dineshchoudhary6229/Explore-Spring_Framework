@@ -39,7 +39,7 @@ public class Example1Application {
 
     }
 
-// In spring boot we can define bean here along with configuration class
+// In spring boot we can define bean here along with configuration class but remember this is outside the Main method
     @Bean(name = "customer2")
     public Customer customer2(){
         System.out.println("This is second bean object of Customer :");
