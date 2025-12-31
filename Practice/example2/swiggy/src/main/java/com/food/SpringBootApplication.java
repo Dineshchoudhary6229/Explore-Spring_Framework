@@ -1,7 +1,7 @@
-package com.swiggy.food;
+package com.food;
 
-import com.swiggy.food.delivery.CartItems;
-import com.swiggy.food.delivery.OrderDetails;
+import com.food.delivery.CartItems;
+import com.food.delivery.OrderDetails;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
