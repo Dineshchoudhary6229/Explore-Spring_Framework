@@ -1,8 +1,8 @@
-package com.delivery;
+package com.application.delivery;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("productOne")
 public class Product {
 
     public int productId;

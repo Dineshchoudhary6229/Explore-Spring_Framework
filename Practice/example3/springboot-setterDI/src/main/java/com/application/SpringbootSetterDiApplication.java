@@ -1,4 +1,4 @@
-package com.application.main;
+package com.application;
 
 import com.application.delivery.Order;
 import org.springframework.boot.SpringApplication;
@@ -13,8 +13,10 @@ public class SpringbootSetterDiApplication {
        ConfigurableApplicationContext container= SpringApplication.run(SpringbootSetterDiApplication.class, args);
 
        Order order1= container.getBean("order", Order.class);
+
         System.out.println(order1.getClass());
         System.out.println(order1);
+
         System.out.println(order1.getProduct().getClass());
         System.out.println(order1.getProduct());
         System.out.println(order1.getProduct().getName());

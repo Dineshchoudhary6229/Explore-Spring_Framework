@@ -1,4 +1,4 @@
-package com.delivery;
+package com.application.delivery;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -24,6 +24,8 @@ public class Order {
 // setter DI in spring boot
     @Autowired
     public void setProduct(Product product) {
+        System.out.println("Setter of product is called from order :"+ product);
         this.product = product;
+
     }
 }
