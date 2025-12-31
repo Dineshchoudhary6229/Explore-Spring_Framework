@@ -1,4 +1,4 @@
-package com.swiggy.delivery;
+package com.delivery;
 
 import org.springframework.stereotype.Component;
 

@@ -1,13 +1,10 @@
-package com.swiggy.springboot_setterDI;
+package com.application.main;
 
-import com.swiggy.delivery.Order;
+import com.application.delivery.Order;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
 
-@ComponentScan("com.swiggy.*")
 @SpringBootApplication
 public class SpringbootSetterDiApplication {
 
