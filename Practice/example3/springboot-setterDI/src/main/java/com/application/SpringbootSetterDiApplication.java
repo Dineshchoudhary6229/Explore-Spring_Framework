@@ -16,9 +16,12 @@ public class SpringbootSetterDiApplication {
 
         System.out.println(order1.getClass());
         System.out.println(order1);
+        System.out.println("\n");
 
         System.out.println(order1.getProduct().getClass());
         System.out.println(order1.getProduct());
+        System.out.println("\n");
+
         System.out.println(order1.getProduct().getName());
         System.out.println(order1.getProduct().getProductId());
         System.out.println(order1.getProduct().getPrice());

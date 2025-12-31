@@ -1,7 +1,8 @@
 package com.application.delivery;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
-
+// @Primary
 @Component("productOne")
 public class Product {
 
@@ -10,7 +11,7 @@ public class Product {
     public double price;
 
     public Product() {
-        System.out.println("product object is created: ");
+        System.out.println("product object is created via default constructor : ");
     }
 
     public int getProductId() {
