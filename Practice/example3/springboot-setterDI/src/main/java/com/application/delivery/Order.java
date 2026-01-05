@@ -21,7 +21,31 @@ public class Order {
         return product;
     }
 
-// setter DI in spring boot
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
+    }
+
+    public int getNoOfItems() {
+        return noOfItems;
+    }
+
+    public void setNoOfItems(int noOfItems) {
+        this.noOfItems = noOfItems;
+    }
+
+    public String getEmailId() {
+        return emailId;
+    }
+
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+    }
+
+    // setter DI in spring boot
     @Autowired
 //    @Qualifier("productTwo")
     public void setProduct(Product product) {
@@ -31,6 +55,8 @@ public class Order {
     }
     // here setter method arg name is product so it will blindly inject this depencey because bean
     // name's are product and productTwo so it blindly inject product dependency
+
+
 }
 /* If we change bean names to productOne and productTwo and setter method arg name is product then there is
    ambiguity which is resolved using @Primary or @Qualifier annotation

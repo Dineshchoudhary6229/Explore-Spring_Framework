@@ -1,14 +1,15 @@
 package com.application.delivery;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 // @Primary
 @Component("productOne")
 public class Product {
-
+    @Value("100")           // we can set value of fields directly like this instead of using setter
     public int productId;
     public String name;
-    public double price;
+    public int price;
 
     public Product() {
         System.out.println("product object is created via default constructor : ");
@@ -18,9 +19,9 @@ public class Product {
         return productId;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
-    }
+//    public void setProductId(int productId) {
+//        this.productId = productId;
+//    }
 
     public String getName() {
         return name;
@@ -30,11 +31,11 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 }
