@@ -1,3 +1,13 @@
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring](https://img.shields.io/badge/Spring-Framework-brightgreen)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green)
+![Hibernate](https://img.shields.io/badge/Hibernate-ORM-yellow)
+![Maven](https://img.shields.io/badge/Maven-Build-blue)
+![Status](https://img.shields.io/badge/Status-Active-success)
+
+![Repo Size](https://img.shields.io/github/repo-size/Dineshchoudhary6229/Explore-Spring_Framework)
+
+
 # Explore Spring Framework
 
 This repository contains **end-to-end learning and implementation of the Spring ecosystem**, starting from **Spring Core basics** to **advanced Spring Boot and Spring Data JPA concepts**.
@@ -53,4 +63,10 @@ It is a **practice-based repository** with multiple projects demonstrating real-
 ---
 
 ## 📂 Project Structure
+Explore-Spring_Framework
+│
+├── project-1 → Spring Core (XML & DI)
+├── project-2 → Spring Boot & JPA
+├── pom.xml → Multi-module Maven configuration
+└── .gitignore
 
