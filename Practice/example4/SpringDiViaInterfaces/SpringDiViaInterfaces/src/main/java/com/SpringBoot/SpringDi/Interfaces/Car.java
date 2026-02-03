@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 @Component
 public class Car implements Vehicle{
-    @Value("${company.email}")
+    @Value("${company.email}")            // it's value injected from application.properties , this is used for @value annotation
     public String companyEmail;
     @Value("${company.address}")
     public String companyAddress;
